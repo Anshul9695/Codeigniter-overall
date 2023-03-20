@@ -36,6 +36,14 @@ $routes->post('/books/create','Book::create'); //create new book
 $routes->get('/books/edit/(:num)','Book::edit/$1'); //for show record for edit
 $routes->post('/books/edit/(:num)','Book::edit/$1'); // update your recard
 $routes->get('/books/delete/(:num)','Book::delete/$1'); // for delete the recored
+
+// ADD STUDENT MODULE START FROM HERE..
+$routes->get('/student/list','StudentController::index');
+$routes->get('/student/create','StudentController::create');
+$routes->post('/student/create','StudentController::create');
+$routes->get('/student/edit/(:num)','StudentController::edit/$1');
+$routes->post('/student/update/(:num)','StudentController::update/$1');
+$routes->get('/student/delete/(:num)','StudentController::delete/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
