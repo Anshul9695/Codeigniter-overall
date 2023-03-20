@@ -30,7 +30,12 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-
+$routes->get('/books','Book::index'); //load data in table
+$routes->get('/books/create','Book::create'); // create new book form
+$routes->post('/books/create','Book::create'); //create new book
+$routes->get('/books/edit/(:num)','Book::edit/$1'); //for show record for edit
+$routes->post('/books/edit/(:num)','Book::edit/$1'); // update your recard
+$routes->get('/books/delete/(:num)','Book::delete/$1'); // for delete the recored
 /*
  * --------------------------------------------------------------------
  * Additional Routing
